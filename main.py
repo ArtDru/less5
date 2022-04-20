@@ -5,6 +5,13 @@ HEADERS = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
             'accept' :'*/*'}
 URL = 'https://jut.su/'
 
+# r = requests.get(URL, headers=HEADERS)
+# srs = r.text
+# # print(srs)
+# with open('index.html', 'w') as f:
+#     f.write(srs)
+
+
 def get_html(url, params=None):
     r = requests.get(url, headers=HEADERS, params=params)
     return r
@@ -20,7 +27,7 @@ def get_content(html):
             'name': name,
             'link': 'https://jut.su/' + link
         })
-        print(len(recors))
+    print(recors)
 
 
 def main():
